@@ -1,0 +1,14 @@
+select{ 
+    width: 60%;
+    height: 50%;
+    background-color: #3d5ddb
+}
+.name{
+    width:23%;
+}
+.batches{
+    width:17%;
+}
+.stock,.deal,.free,.mrp,.rate,.exp{
+    width:10%;
+}
