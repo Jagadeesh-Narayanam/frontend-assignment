@@ -47,7 +47,7 @@ const Row = (props) => {
         <td className="free">{free}</td>
         <td className="mrp">{_.maxBy(productBatches, "mrp").mrp}</td>
         <td className="rate">{_.maxBy(productBatches, "rate").rate}</td>
-        <td className="exp">{_.maxBy(productBatches, "exp").exp}</td>
+        <td className="exp">{_.minBy(productBatches, "exp").exp}</td>
       </tr>
     );
   } else {
@@ -73,7 +73,7 @@ const Row = (props) => {
         <td className="free">{_.sumBy(requiredRow, "free")}</td>
         <td className="mrp">{_.maxBy(requiredRow, "mrp").mrp}</td>
         <td className="rate">{_.maxBy(requiredRow, "rate").rate}</td>
-        <td className="exp">{_.maxBy(requiredRow, "exp").exp}</td>
+        <td className="exp">{_.minBy(requiredRow, "exp").exp}</td>
       </tr>
     );
   }
